@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Environment Name:</strong>
+  <%= @environment.EnvironmentName %>
+</p>
+
+<p>
+  <strong>Environment Description:</strong>
+  <%= @environment.EnvironmentDescription %>
+</p>
+  </div>
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>
+      <strong>Created By:</strong>
+      <%= @environment.CreatedBy %>
+    </p>
+<p>
+  <strong>Created Date:</strong>
+  <%= @environment.CreatedDate %>
+</p>
+
+<p>
+  <strong>Last Modified By:</strong>
+  <%= @environment.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Last Modified Date:</strong>
+  <%= @environment.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Is Deleted:</strong>
+  <%= @environment.IsDeleted %>
+</p>
+  </div>
+  </div>
+
+<%= link_to 'Edit', edit_environment_path(@environment) %> |
+<%= link_to 'Back', environments_path %>

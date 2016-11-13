@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>User Store Name:</strong>
+  <%= @user_store_role.user_store.UserStoreName %>
+</p>
+
+<p>
+  <strong>Role Description:</strong>
+  <%= @user_store_role.role.RoleDescription %>
+</p>
+  </div>
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Created By:</strong>
+  <%= @user_store_role.CreatedBy %>
+</p>
+
+<p>
+  <strong>Created Date:</strong>
+  <%= @user_store_role.CreatedDate %>
+</p>
+
+<p>
+  <strong>Last Modified By:</strong>
+  <%= @user_store_role.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Last Modified Date:</strong>
+  <%= @user_store_role.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Is Deleted:</strong>
+  <%= @user_store_role.IsDeleted %>
+</p>
+  </div>
+  </div>
+
+<%= link_to 'Edit', edit_user_store_role_path(@user_store_role) %> |
+<%= link_to 'Back', user_store_roles_path %>

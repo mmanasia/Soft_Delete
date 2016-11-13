@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Certificate Name:</strong>
+  <%= @cert_store_role.cert_store.CertStoreName %>
+</p>
+
+<p>
+  <strong>Role Description:</strong>
+  <%= @cert_store_role.role.RoleDescription %>
+</p>
+  </div>
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Created By:</strong>
+  <%= @cert_store_role.CreatedBy %>
+</p>
+
+<p>
+  <strong>Created Date:</strong>
+  <%= @cert_store_role.CreatedDate %>
+</p>
+
+<p>
+  <strong>Last Modified By:</strong>
+  <%= @cert_store_role.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Last Modified Date:</strong>
+  <%= @cert_store_role.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Is Deleted:</strong>
+  <%= @cert_store_role.IsDeleted %>
+</p>
+  </div>
+  </div>
+
+<%= link_to 'Edit', edit_cert_store_role_path(@cert_store_role) %> |
+<%= link_to 'Back', cert_store_roles_path %>

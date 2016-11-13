@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>User Group Name:</strong>
+  <%= @user_group.UserGroupName %>
+</p>
+  </div>
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Created By:</strong>
+  <%= @user_group.CreatedBy %>
+</p>
+
+<p>
+  <strong>Created Date:</strong>
+  <%= @user_group.CreatedDate %>
+</p>
+
+<p>
+  <strong>Last Modified By:</strong>
+  <%= @user_group.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Last Modified Date:</strong>
+  <%= @user_group.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Is Deleted:</strong>
+  <%= @user_group.IsDeleted %>
+</p>
+  </div>
+  </div>
+
+<%= link_to 'Edit', edit_user_group_path(@user_group) %> |
+<%= link_to 'Back', user_groups_path %>

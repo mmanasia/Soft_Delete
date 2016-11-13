@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Source Description:</strong>
+  <%= @role.source.SourceDescription %>
+</p>
+
+<p>
+  <strong>Role Description:</strong>
+  <%= @role.RoleDescription %>
+</p>
+  </div>
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Created By:</strong>
+  <%= @role.CreatedBy %>
+</p>
+
+<p>
+  <strong>Created Date:</strong>
+  <%= @role.CreatedDate %>
+</p>
+
+<p>
+  <strong>Last Modified By:</strong>
+  <%= @role.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Last Modified Date:</strong>
+  <%= @role.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Is Deleted:</strong>
+  <%= @role.IsDeleted %>
+</p>
+  </div>
+  </div>
+
+<a class="btn btn-primary btn-sm" href="http://localhost:3000/cert_store_roles/new" role="button">Go to Certificate Role</a>
+<a class="btn btn-primary btn-sm" href="http://localhost:3000/user_store_roles/new" role="button">Go to User Store Role</a>
+<BR><BR>
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>

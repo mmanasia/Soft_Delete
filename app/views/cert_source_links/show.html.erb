@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+<p>
+  <strong>Certificate Name:</strong>
+  <%= @cert_source_link.cert_store.CertStoreName %>
+</p>
+
+<p>
+  <strong>Hyperlink:</strong>
+  <%= @cert_source_link.source_link.Hyperlink%>
+</p>
+  </div>
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>
+      <strong>Created By:</strong>
+      <%= @cert_source_link.CreatedBy %>
+    </p>
+
+<p>
+  <strong>Created Date:</strong>
+  <%= @cert_source_link.CreatedDate %>
+</p>
+
+<p>
+  <strong>Last Modified By:</strong>
+  <%= @cert_source_link.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Last Modified Date:</strong>
+  <%= @cert_source_link.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Is Deleted:</strong>
+  <%= @cert_source_link.IsDeleted %>
+</p>
+  </div>
+  </div>
+
+<%= link_to 'Edit', edit_cert_source_link_path(@cert_source_link) %> |
+<%= link_to 'Back', cert_source_links_path %>

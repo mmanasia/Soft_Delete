@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Record ID:</strong>
+  <%= @teics_audit_log.RecordId %>
+</p>
+
+<p>
+  <strong>Table Name:</strong>
+  <%= @teics_audit_log.TableName %>
+</p>
+
+<p>
+  <strong>Attribute:</strong>
+  <%= @teics_audit_log.Attribute %>
+</p>
+
+<p>
+  <strong>Previous Value:</strong>
+  <%= @teics_audit_log.PreviousValue %>
+</p>
+
+<p>
+  <strong>Current Value:</strong>
+  <%= @teics_audit_log.CurrentValue %>
+</p>
+
+<p>
+  <strong>Created By:</strong>
+  <%= @teics_audit_log.CreatedBy %>
+</p>
+
+<p>
+  <strong>Created Date:</strong>
+  <%= @teics_audit_log.CreatedDate %>
+</p>
+
+<p>
+  <strong>Last Modified By:</strong>
+  <%= @teics_audit_log.LastModifiedBy %>
+</p>
+
+<p>
+  <strong>Last Modified Date:</strong>
+  <%= @teics_audit_log.LastModifiedDate %>
+</p>
+
+<p>
+  <strong>Is Deleted:</strong>
+  <%= @teics_audit_log.IsDeleted %>
+</p>
+
+<%= link_to 'Edit', edit_teics_audit_log_path(@teics_audit_log) %> |
+<%= link_to 'Back', teics_audit_logs_path %>

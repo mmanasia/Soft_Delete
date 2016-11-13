@@ -1,0 +1,64 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+
+<h1>Certificate Store</h1>
+
+<div style="overflow-x:auto;">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+  </style>
+
+  <a class="btn btn-primary btn-sm" href="http://localhost:3000/cert_stores/new" role="button">Create New Certificate</a>
+
+  <BR><BR>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Certificate Name</th>
+      <th>Certificate Description</th>
+      <th>Certificate Password</th>
+      <th>Certificate Expiration Date</th>
+      <th>Certificate File</th>
+      <th>Mime Type</th>
+      <th>Source Description</th>
+      <th>Environment Name</th>
+      <th>Identity Type Name</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @cert_stores.each do |cert_store| %>
+        <tr>
+          <td><%= cert_store.CertStoreName %></td>
+          <td><%= cert_store.CertStoreDescription %></td>
+          <td><%= cert_store.CertStorePassword %></td>
+          <td><%= cert_store.CertStoreExpirationDate %></td>
+          <td><%= link_to 'Download Certificate', cert_store.unc_url %></td>
+          <td><%= cert_store.MimeType %></td>
+          <td><%= cert_store.source.SourceDescription %></td>
+          <td><%= cert_store.environment.EnvironmentName %></td>
+          <td><%= cert_store.identity_type.IdentityTypeName %></td>
+          <td><%= link_to 'View', cert_store %></td>
+          <td><%= link_to 'Update', edit_cert_store_path(cert_store) %></td>
+          <td><%= link_to 'Delete', cert_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
